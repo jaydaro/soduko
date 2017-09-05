@@ -23,7 +23,7 @@ const validData = [
   [3, 4, 5, 2, 8, 6, 1, 7, 9]
 ];
 
-function sudukoValidator(dataSet) {
+function sudokuValidator(dataSet) {
 
   //create a valid set to compare to
   const validSet = '1,2,3,4,5,6,7,8,9';
@@ -47,4 +47,4 @@ function sudukoValidator(dataSet) {
   return isValid(dataSet) && isValid(cols) && isValid(groups);
 }
 
-console.log('validData',sudukoValidator(validData));
+console.log('validData',sudokuValidator(validData));
