@@ -1,0 +1,18 @@
+//get the columns
+function getColumns(dataSet) {
+  return dataSet.map((row, index) => dataSet.map(row => row[index]));
+}
+
+//get the groups.
+function getGroups(dataSet) {
+  const groups = dataSet.map(row => []);
+  dataSet.forEach((row, rowIndex) => {
+    row.forEach((value, columnIndex) => {
+      let groupId = Math.floor(columnIndex / 3) * 3 + Math.floor(rowIndex / 3);
+      groups[groupId].push(value);
+    })
+  });
+  return groups;
+}
+
+module.exports = {getColumns, getGroups};
